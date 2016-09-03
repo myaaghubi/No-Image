@@ -1,0 +1,33 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content_script.js" ],
+      "matches": [ "*://*/*" ],
+	  "css": ["style.css"],
+      "run_at": "document_end"
+   } ],
+   "browser_action": {
+      "default_icon": {
+         "19": "images/icon19-disabled.png"
+      },
+      "default_title": "No Image"
+   },
+   "description": "Block all images and videos on webpage, but you can reload each image by clicking on it!",
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "48": "images/icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "No Image",
+   "short_name": "No Image",
+   "permissions": [ "storage", "webRequest", "webRequestBlocking", "\u003Call_urls>" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1.1", 
+   "web_accessible_resources":[
+	   "reload.png"
+   ]
+}
